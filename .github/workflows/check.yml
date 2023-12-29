@@ -1,0 +1,31 @@
+# This workflow enables developers to call PR-Agents `/[actions]` in PR's comments and upon PR creation. 
+# Learn more at https://www.codium.ai/pr-agent/
+# This is v0.2 of this workflow file
+
+name: PR-Agent
+
+on:
+# pull_request:
+# issue_comment:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  pr_agent_job:
+    runs-on: ubuntu-latest
+    name: Run pr agent on every pull request
+    steps:
+      - name: PR Agent action step
+        id: pragent
+        uses: FromTheFutureSui/pr-agent@main
+        env:
+          OPENAI_KEY: "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" # Make sure to add your OpenAI key to your repo secrets
+          GITHUB_TOKEN: "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" # Make sure to add your GitHub token to your repo secrets
+          github_action.auto_review: "true" # enable\disable auto review
+          github_action.auto_describe: "true" # enable\disable auto describe
+          github_action.auto_improve: "false" # enable\disable auto improve
+
+
