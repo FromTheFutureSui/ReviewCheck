@@ -23,7 +23,7 @@ jobs:
         uses: FromTheFutureSui/pr-agent@main
         env:
           OPENAI_KEY: "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" # Make sure to add your OpenAI key to your repo secrets
-          GITHUB_TOKEN: "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" # Make sure to add your GitHub token to your repo secrets
+          GITHUB_TOKEN: "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" # Make sure to add your GitHub token to your repo secrets
           github_action.auto_review: "true" # enable\disable auto review
           github_action.auto_describe: "true" # enable\disable auto describe
           github_action.auto_improve: "false" # enable\disable auto improve
