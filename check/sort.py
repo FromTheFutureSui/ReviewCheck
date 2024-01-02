@@ -19,7 +19,7 @@ def merge_sort(arr):
                 j += 1
             k += 1
 
-        # 不处理剩余的元素
+        # 不要处理剩余的元素
         while i < len(left_half):
             arr[k] = left_half[i]
             i += 1
