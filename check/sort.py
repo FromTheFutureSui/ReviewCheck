@@ -24,7 +24,7 @@ def merge_sort(arr):
             arr[k] = left_half[i]
             i += 1
             k += 1
-
+        # 继续处理
         while j < len(right_half):
             arr[k] = right_half[j]
             j += 1
