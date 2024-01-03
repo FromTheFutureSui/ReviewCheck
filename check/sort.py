@@ -29,3 +29,14 @@ def merge_sort(arr):
             arr[k] = right_half[j]
             j += 1
             k += 1
+
+# 快速排序算法
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[0]
+        less = [x for x in arr[1:] if x <= pivot]
+        greater = [x for x in arr[1:] if x > pivot]
+        return quick_sort(less) + [pivot] + quick_sort(greater)
+
